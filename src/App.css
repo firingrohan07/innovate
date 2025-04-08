@@ -1956,3 +1956,347 @@
 .create-button:hover {
   background-color: #00cc00; /* Darker green */
 }
+
+/* search stay */
+/* SearchStay.css */
+.search-stay-container {
+  font-family: sans-serif;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.search-stay-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.search-stay-header h1 {
+  font-size: 24px;
+  color: #333;
+}
+
+.profile-icon {
+  font-size: 24px;
+  color: #777;
+  cursor: pointer;
+}
+
+.search-stay-main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.search-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.search-bar label {
+  font-weight: bold;
+  color: #333;
+}
+
+.search-bar input[type='text'] {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.filter-section {
+  margin-bottom: 15px;
+}
+
+.filter-button {
+  padding: 10px 15px;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  background-color: #eee;
+  color: #333;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.filter-button:hover {
+  background-color: #ddd;
+}
+
+.stays-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.stay-card {
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background-color: #fff;
+}
+
+.stay-card .owner-name {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.stay-card p {
+  margin: 5px 0;
+  color: #333;
+}
+
+.stay-card .select-button {
+  background-color: #00ff00; /* Bright green */
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.stay-card .select-button:hover {
+  background-color: #00cc00; /* Darker green */
+}
+
+.no-results {
+  color: red;
+  font-style: italic;
+}
+
+/* ConfirmList.css */
+.confirm-list-container {
+  font-family: sans-serif;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.confirm-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.confirm-list-header h1 {
+  font-size: 24px;
+  color: #333;
+}
+
+.profile-icon {
+  font-size: 24px;
+  color: #777;
+  cursor: pointer;
+}
+
+.confirm-list-main h2 {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: auto auto; /* Two columns for labels and values */
+  gap: 10px 20px;
+  margin-bottom: 20px;
+}
+
+.detail-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.detail-item .label {
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 3px;
+}
+
+.detail-item .value {
+  color: #555;
+}
+
+.detail-item.additional-details {
+  grid-column: 1 / -1; /* Span across both columns */
+  flex-direction: column;
+}
+
+.post-it-button {
+  background-color: #00ff00; /* Bright green */
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+.post-it-button:hover {
+  background-color: #00cc00; /* Darker green */
+}
+
+/* ConfirmStay.css */
+.confirm-stay-container {
+  font-family: sans-serif;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.confirm-stay-header {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.confirm-stay-header h1 {
+  font-size: 24px;
+  color: #333;
+}
+
+.profile-icon {
+  font-size: 24px;
+  color: #777;
+  cursor: pointer;
+}
+
+.confirm-stay-main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.profile-section,
+.selected-section,
+.maps-section {
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background-color: #fff;
+}
+
+.profile-section h2,
+.selected-section h2,
+.maps-section h2 {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 5px;
+}
+
+.profile-section p {
+  margin: 8px 0;
+  color: #333;
+}
+
+.report-share-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.report-button,
+.share-button {
+  padding: 8px 15px;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  background-color: #eee;
+  color: #333;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.report-button:hover,
+.share-button:hover {
+  background-color: #ddd;
+}
+
+.selected-section p {
+  margin: 8px 0;
+  color: #333;
+}
+
+.select-button.proceed-select {
+  background-color: #00ff00; /* Bright green */
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.select-button.proceed-select:hover {
+  background-color: #00cc00; /* Darker green */
+}
+
+.maps-section .map-container {
+  width: 100%;
+  height: 200px; /* Adjust as needed */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #777;
+  font-style: italic;
+}
+
+.proceed-button {
+  grid-column: 1 / -1;
+  background-color: #007bff;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+.proceed-button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 600px) {
+  .confirm-stay-container {
+    grid-template-columns: 1fr;
+  }
+}

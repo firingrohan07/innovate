@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route, Link, useNavigate, useParams } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link, useNavigate, useParams, useLocation  } from 'react-router-dom';
 import './App.css'; // Import your main CSS file
 // import './RideDetails.css'; // Import the CSS for RideDetailsPage
 
@@ -7,7 +7,7 @@ function HomePage() {
   return (
     <div className="home-container">
       <header className="home-header">
-        <h1>Welcome XYZ!</h1>
+        <h1>Welcome Rohan!</h1>
         <div className="profile-icon">👤</div>
       </header>
       <main className="home-main">
@@ -16,12 +16,16 @@ function HomePage() {
             Share a ride <span role="img" aria-label="car with people">🚗👥</span>
           </button>
         </Link>
+        <Link to="/list-stay" className="home-button-link">
         <button className="home-button list-stay">
           List a stay <span role="img" aria-label="house">🏠</span>
         </button>
-        <button className="home-button search-stay">
-          Search a stay <span role="img" aria-label="magnifying glass over house">🔎🏠</span>
-        </button>
+        </Link>
+        <Link to="/search-stay" className="home-button-link">
+          <button className="home-button search-stay">
+            Search a stay <span role="img" aria-label="magnifying glass over house">🔎🏠</span>
+          </button>
+        </Link>
       </main>
     </div>
   );
@@ -673,6 +677,271 @@ function ListStayPage() {
   );
 }
 
+function ConfirmListPage() {
+  const navigate = useNavigate();
+  // In a real application, you would receive the room details
+  // as props or from a state management system.
+  const roomDetails = {
+    roomType: '2 BHK',
+    location: 'Baner',
+    rent: '21,000/-',
+    deposit: 'NIL',
+    personCount: 4,
+    pets: 'Allowed',
+    genderPreference: 'Male/Female',
+    additionalDetails: 'few more info',
+  };
+
+  const handlePostIt = () => {
+    // In a real application, this would trigger the final listing creation
+    console.log('Posting room details:', roomDetails);
+    alert('Room details posted!');
+    navigate('/home'); // Redirect to home after posting
+  };
+
+  return (
+    <div className="confirm-list-container">
+      <header className="confirm-list-header">
+        <h1>Confirm your room details <span role="img" aria-label="house">🏠</span></h1>
+        <div className="profile-icon">👤</div>
+      </header>
+      <main className="confirm-list-main">
+        <h2>Provide your details: -</h2>
+        <div className="details-grid">
+          <div className="detail-item">
+            <span className="label">Room Type:</span>
+            <span className="value">{roomDetails.roomType}</span>
+          </div>
+          <div className="detail-item">
+            <span className="label">Location:</span>
+            <span className="value">{roomDetails.location}</span>
+          </div>
+          <div className="detail-item">
+            <span className="label">Rent:</span>
+            <span className="value">{roomDetails.rent}</span>
+          </div>
+          <div className="detail-item">
+            <span className="label">Deposit(if any):</span>
+            <span className="value">{roomDetails.deposit}</span>
+          </div>
+          <div className="detail-item">
+            <span className="label">No. of person rm:</span>
+            <span className="value">{roomDetails.personCount}</span>
+          </div>
+          <div className="detail-item">
+            <span className="label">Pets:</span>
+            <span className="value">{roomDetails.pets}</span>
+          </div>
+          <div className="detail-item">
+            <span className="label">Gender preference:</span>
+            <span className="value">{roomDetails.genderPreference}</span>
+          </div>
+          <div className="detail-item additional-details">
+            <span className="label">few more details</span>
+            <span className="value">{roomDetails.additionalDetails}</span>
+          </div>
+        </div>
+        <button className="post-it-button" onClick={handlePostIt}>
+          POST IT!
+        </button>
+      </main>
+    </div>
+  );
+}
+
+function ConfirmStayPage() {
+  const navigate = useNavigate();
+  const location = useLocation();
+  const selectedStay = location.state;
+
+  if (!selectedStay) {
+    // Handle the case where no stay was selected
+    console.error('No stay selected.');
+    navigate('/search-stay');
+    return null;
+  }
+
+  const handleProceed = () => {
+    alert('Stay booked!');
+    navigate('/home');
+  };
+
+  return (
+    <div className="confirm-stay-container">
+      <header className="confirm-stay-header">
+        <h1>Confirm your stay <span role="img" aria-label="house">🏠</span></h1>
+        <div className="profile-icon">👤</div>
+      </header>
+      <main className="confirm-stay-main">
+        <section className="profile-section">
+          <h2>Profile: -</h2>
+          <p>Name: {selectedStay.owner}</p>
+          <p>Age: {selectedStay.age || 'N/A'}</p>
+          <p>Member since: {selectedStay.memberSince || 'N/A'}</p>
+          <p>Few more Details: {selectedStay.bio || 'N/A'}</p>
+          <p>Pets: {selectedStay.pets || 'N/A'}</p>
+          <p>Tenant agreement: {selectedStay.agreement || 'N/A'}</p>
+          <div className="report-share-actions">
+            <button className="report-button">
+              <span role="img" aria-label="warning">⚠️</span> Report this stay
+            </button>
+            <button className="share-button">
+              <span role="img" aria-label="share">分享</span> Share this stay
+            </button>
+          </div>
+        </section>
+
+        <section className="selected-section">
+          <h2>Selected: -</h2>
+          <p>Name: {selectedStay.owner}</p>
+          <p>Room type: {selectedStay.roomType}</p>
+          <p>Rent: {selectedStay.rent}</p>
+          <p>No. of person: {selectedStay.personCount}</p>
+          <button className="select-button proceed-select">Select →</button>
+        </section>
+
+        <section className="maps-section">
+          <h2>Maps: -</h2>
+          <p>exact location pinned</p>
+          <div className="map-container">
+            {/* Placeholder for Google Map */}
+            <div className="map-placeholder">Map will be displayed here</div>
+          </div>
+        </section>
+
+        {/* Option 1: Using navigate with an alert */}
+        <button className="proceed-button" onClick={handleProceed}>
+          Proceed →
+        </button>
+
+        {/* Option 2: Using Link and then triggering an alert on the next page (HomePage) - Less ideal for immediate feedback */}
+        {/* <Link to="/home" className="proceed-link" onClick={() => alert('Stay booked!')}>
+          <button className="proceed-button">
+            Proceed →
+          </button>
+        </Link> */}
+      </main>
+    </div>
+  );
+}
+
+function SearchStayPage() {
+  const navigate = useNavigate();
+  const [location, setLocation] = useState('');
+  // Dummy stay data
+  const stays = [
+    {
+      id: 1,
+      owner: 'Rohan Sharma',
+      roomType: '2BHK',
+      rent: 21000,
+      personCount: 4,
+      location: 'Baner, Pune',
+      age: 21,
+      memberSince: 2021,
+      bio: 'Bio and all.',
+      pets: 'Allowed',
+      agreement: '1yr',
+    },
+    {
+      id: 2,
+      owner: 'Rohit Oturkar',
+      roomType: '1BHK',
+      rent: 14000,
+      personCount: 4,
+      location: 'Koregaon Park, Pune',
+    },
+    {
+      id: 3,
+      owner: 'Mahati Kapuganty',
+      roomType: '3BHK',
+      rent: 31000,
+      personCount: 4,
+      location: 'Hinjawadi, Pune',
+    },
+    {
+      id: 4,
+      owner: 'Akshat Vashisht',
+      roomType: '3BHK',
+      rent: 41000,
+      personCount: 2,
+      location: 'Viman Nagar, Pune',
+    },
+    // Add more stay objects here
+  ];
+
+  const handleLocationChange = (event) => {
+    setLocation(event.target.value);
+    // In a real application, you would likely trigger a search here
+  };
+
+  const handleSelectStay = (stayId) => {
+    const selectedStay = stays.find(stay => stay.id === stayId);
+    if (selectedStay) {
+      navigate(`/confirm-stay/${stayId}`, { state: selectedStay });
+    } else {
+      console.error('Stay not found:', stayId);
+    }
+  };
+
+  const filteredStays = location
+    ? stays.filter((stay) =>
+        stay.location.toLowerCase().includes(location.toLowerCase())
+      )
+    : stays;
+
+  return (
+    <div className="search-stay-container">
+      <header className="search-stay-header">
+        <h1>Search a stay <span role="img" aria-label="house">🏠</span></h1>
+        <div className="profile-icon">👤</div>
+      </header>
+      <main className="search-stay-main">
+        <div className="search-bar">
+          <label htmlFor="location">Enter a location</label>
+          <input
+            type="text"
+            id="location"
+            placeholder="baner, pune"
+            value={location}
+            onChange={handleLocationChange}
+          />
+          {/* You might have a dropdown or suggestions here in a real app */}
+        </div>
+        <div className="filter-section">
+          <button className="filter-button">Filter →</button>
+          {/* Implement filter options here */}
+        </div>
+        <div className="stays-grid">
+          {filteredStays.map((stay) => (
+            <div key={stay.id} className="stay-card">
+              <p className="owner-name">{stay.owner}</p>
+              <p>Room type: {stay.roomType}</p>
+              <p>Rent: {stay.rent}</p>
+              <p>No. of person: {stay.personCount}</p>
+              {stay.id === 1 ? (
+                <Link
+                  to={`/confirm-stay/${stay.id}`}
+                  state={stays.find((s) => s.id === stay.id)}
+                  className="select-link"
+                >
+                  <button className="select-button">Select →</button>
+                </Link>
+              ) : (
+                <button className="select-button" onClick={() => handleSelectStay(stay.id)}>
+                  Select →
+                </button>
+              )}
+            </div>
+          ))}
+          {filteredStays.length === 0 && location && (
+            <p className="no-results">No stays found in "{location}"</p>
+          )}
+        </div>
+      </main>
+    </div>
+  );
+}
 
 function App() {
   return (
@@ -691,6 +960,8 @@ function App() {
         <Route path="/book-ride/:rideId" element={<BookRidePage />} />
         <Route path="/booking-confirmation" element={<BookingConfirmationPage />} />
         <Route path="/list-stay" element={<ListStayPage />} /> 
+        <Route path="/search-stay" element={<SearchStayPage />} />
+        <Route path="/confirm-stay/:stayId" element={<ConfirmStayPage />} />
       </Routes>
     </Router>
   );

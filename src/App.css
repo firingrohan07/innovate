@@ -1,0 +1,1958 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f7f7f7; /* Light grey background */
+  font-family: sans-serif;
+}
+
+.logo-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%; /* Adjust as needed */
+  padding: 40px;
+  background: radial-gradient(circle, #aaffaa, #ccffcc, #e6ffe6, #ffffff); /* Green gradient background */
+  border-radius: 15px;
+}
+
+.logo-area h1 {
+  font-size: 3em;
+  color: #000; /* Black text */
+  font-weight: bold;
+}
+
+/* Login Form Styles */
+.login-form {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 30%; /* Adjust as needed */
+  text-align: left;
+}
+
+.login-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.login-form .input-group {
+  margin-bottom: 15px;
+}
+
+.login-form .input-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #555;
+  font-size: 0.9em;
+}
+
+.login-form .input-group input[type='text'],
+.login-form .input-group input[type='password'] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 1em;
+}
+
+.login-form .forgot-password {
+  display: block;
+  text-align: right;
+  margin-bottom: 15px;
+  color: #007bff;
+  font-size: 0.8em;
+  text-decoration: none;
+}
+
+.login-form .forgot-password:hover {
+  text-decoration: underline;
+}
+
+.login-form .login-button {
+  background-color: #5bc0de; /* Light blue button */
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.login-form .login-button:hover {
+  background-color: #46b8da;
+}
+
+.login-form .signup-link {
+  text-align: center;
+  margin-top: 20px;
+  color: #777;
+  font-size: 0.9em;
+}
+
+.login-form .signup-link a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.login-form .signup-link a:hover {
+  text-decoration: underline;
+}
+
+/* Signup Form Styles */
+.signup-form {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 30%; /* Adjust as needed */
+  text-align: left;
+}
+
+.signup-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.signup-form .input-group {
+  margin-bottom: 15px;
+}
+
+.signup-form .input-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #555;
+  font-size: 0.9em;
+}
+
+.signup-form .input-group input[type='email'],
+.signup-form .input-group input[type='tel'],
+.signup-form .input-group input[type='text'],
+.signup-form .input-group input[type='password'] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 1em;
+}
+
+.signup-form .password-note {
+  color: #ff0000; /* Red color for the note */
+  font-size: 0.8em;
+  margin-bottom: 10px;
+}
+
+.signup-form .signup-button {
+  background-color: #5bc0de; /* Light blue button */
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.signup-form .signup-button:hover {
+  background-color: #46b8da;
+}
+
+.signup-form .login-link {
+  text-align: center;
+  margin-top: 20px;
+  color: #777;
+  font-size: 0.9em;
+}
+
+.signup-form .login-link a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.signup-form .login-link a:hover {
+  text-decoration: underline;
+}
+
+/* Home Page Styles */
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Align items at the top */
+  min-height: 100vh;
+  padding: 40px;
+  background-color: #f7f7f7;
+  font-family: sans-serif;
+}
+
+.home-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%; /* Adjust as needed */
+  margin-bottom: 40px;
+}
+
+.home-header h1 {
+  font-size: 2.5em;
+  color: #333;
+}
+
+.profile-icon {
+  font-size: 2em;
+  cursor: pointer;
+  color: #555;
+  border: 1px solid #555;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 80%; /* Adjust as needed */
+  max-width: 500px; /* Limit width of buttons */
+}
+
+.home-button-link {
+  text-decoration: none; /* Remove default link styling */
+  width: 100%; /* Make the link take the full width of the button container */
+}
+
+.home-button {
+  background-color: #aaffaa; /* Light green */
+  color: #000;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.1em;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s ease;
+  width: 100%; /* Make the button fill the link */
+  box-sizing: border-box; /* Ensure padding doesn't increase the button's overall width */
+}
+
+.home-button:hover {
+  background-color: #88ff88;
+}
+
+.home-button span[role="img"] {
+  font-size: 1.5em;
+}
+
+.share-ride {
+  /* No specific styles needed for now */
+}
+
+.list-stay {
+  /* No specific styles needed for now */
+}
+
+.search-stay {
+  /* No specific styles needed for now */
+}
+
+/* Profile Setup Form Styles */
+.profile-setup-form {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 30%; /* Adjust as needed */
+  text-align: left;
+}
+
+.profile-setup-form h2 {
+  text-align: center;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.profile-setup-form p {
+  margin-bottom: 20px;
+  color: #777;
+  text-align: center;
+}
+
+.profile-setup-form .input-group {
+  margin-bottom: 15px;
+}
+
+.profile-setup-form .input-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #555;
+  font-size: 0.9em;
+}
+
+.profile-setup-form .input-group input[type='email'],
+.profile-setup-form .input-group input[type='tel'],
+.profile-setup-form .input-group input[type='text'],
+.profile-setup-form .input-group input[type='password'] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 1em;
+}
+
+.profile-setup-form .password-note {
+  color: #ff0000; /* Red color for the note */
+  font-size: 0.8em;
+  margin-bottom: 10px;
+}
+
+.profile-setup-form .signup-button {
+  background-color: #5bc0de; /* Light blue button */
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.profile-setup-form .signup-button:hover {
+  background-color: #46b8da;
+}
+
+/* Share Ride Page Styles */
+.share-ride-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Align items at the top */
+  min-height: 100vh;
+  padding: 40px;
+  background-color: #f7f7f7;
+  font-family: sans-serif;
+}
+
+.share-ride-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%; /* Adjust as needed */
+  margin-bottom: 40px;
+}
+
+.share-ride-header h1 {
+  font-size: 2.5em;
+  color: #333;
+}
+
+.share-ride-main {
+  display: flex;
+  gap: 20px;
+}
+
+.share-ride-button {
+  background-color: #aaffaa; /* Light green */
+  color: #000;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.1em;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.share-ride-button:hover {
+  background-color: #88ff88;
+}
+
+.create-ride {
+  /* No specific styles needed for now */
+}
+
+.search-ride {
+  /* No specific styles needed for now */
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f7f7f7; /* Light grey background */
+  font-family: sans-serif;
+}
+
+.logo-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%; /* Adjust as needed */
+  padding: 40px;
+  background: radial-gradient(circle, #aaffaa, #ccffcc, #e6ffe6, #ffffff); /* Green gradient background */
+  border-radius: 15px;
+}
+
+.logo-area h1 {
+  font-size: 3em;
+  color: #000; /* Black text */
+  font-weight: bold;
+}
+
+/* Login Form Styles */
+.login-form {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 30%; /* Adjust as needed */
+  text-align: left;
+}
+
+.login-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.login-form .input-group {
+  margin-bottom: 15px;
+}
+
+.login-form .input-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #555;
+  font-size: 0.9em;
+}
+
+.login-form .input-group input[type='text'],
+.login-form .input-group input[type='password'] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 1em;
+}
+
+.login-form .forgot-password {
+  display: block;
+  text-align: right;
+  margin-bottom: 15px;
+  color: #007bff;
+  font-size: 0.8em;
+  text-decoration: none;
+}
+
+.login-form .forgot-password:hover {
+  text-decoration: underline;
+}
+
+.login-form .login-button {
+  background-color: #5bc0de; /* Light blue button */
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.login-form .login-button:hover {
+  background-color: #46b8da;
+}
+
+.login-form .signup-link {
+  text-align: center;
+  margin-top: 20px;
+  color: #777;
+  font-size: 0.9em;
+}
+
+.login-form .signup-link a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.login-form .signup-link a:hover {
+  text-decoration: underline;
+}
+
+/* Signup Form Styles */
+.signup-form {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 30%; /* Adjust as needed */
+  text-align: left;
+}
+
+.signup-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.signup-form .input-group {
+  margin-bottom: 15px;
+}
+
+.signup-form .input-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #555;
+  font-size: 0.9em;
+}
+
+.signup-form .input-group input[type='email'],
+.signup-form .input-group input[type='tel'],
+.signup-form .input-group input[type='text'],
+.signup-form .input-group input[type='password'] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 1em;
+}
+
+.signup-form .password-note {
+  color: #ff0000; /* Red color for the note */
+  font-size: 0.8em;
+  margin-bottom: 10px;
+}
+
+.signup-form .signup-button {
+  background-color: #5bc0de; /* Light blue button */
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.signup-form .signup-button:hover {
+  background-color: #46b8da;
+}
+
+.signup-form .login-link {
+  text-align: center;
+  margin-top: 20px;
+  color: #777;
+  font-size: 0.9em;
+}
+
+.signup-form .login-link a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.signup-form .login-link a:hover {
+  text-decoration: underline;
+}
+
+/* Home Page Styles */
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Align items at the top */
+  min-height: 100vh;
+  padding: 40px;
+  background-color: #f7f7f7;
+  font-family: sans-serif;
+}
+
+.home-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%; /* Adjust as needed */
+  margin-bottom: 40px;
+}
+
+.home-header h1 {
+  font-size: 2.5em;
+  color: #333;
+}
+
+.profile-icon {
+  font-size: 2em;
+  cursor: pointer;
+  color: #555;
+  border: 1px solid #555;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home-button {
+  background-color: #aaffaa; /* Light green */
+  color: #000;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.1em;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s ease;
+  width: 100%; /* Make the button fill the link */
+  box-sizing: border-box; /* Ensure padding doesn't increase the button's overall width */
+}
+
+.home-button:hover {
+  background-color: #88ff88;
+}
+
+.home-button span[role="img"] {
+  font-size: 1.5em;
+}
+
+.share-ride {
+  /* No specific styles needed for now */
+}
+
+.list-stay {
+  /* No specific styles needed for now */
+}
+
+.search-stay {
+  /* No specific styles needed for now */
+}
+
+/* Profile Setup Form Styles */
+.profile-setup-form {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 30%; /* Adjust as needed */
+  text-align: left;
+}
+
+.profile-setup-form h2 {
+  text-align: center;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.profile-setup-form p {
+  margin-bottom: 20px;
+  color: #777;
+  text-align: center;
+}
+
+.profile-setup-form .input-group {
+  margin-bottom: 15px;
+}
+
+.profile-setup-form .input-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #555;
+  font-size: 0.9em;
+}
+
+.profile-setup-form .input-group input[type='email'],
+.profile-setup-form .input-group input[type='tel'],
+.profile-setup-form .input-group input[type='text'],
+.profile-setup-form .input-group input[type='password'] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 1em;
+}
+
+.profile-setup-form .password-note {
+  color: #ff0000; /* Red color for the note */
+  font-size: 0.8em;
+  margin-bottom: 10px;
+}
+
+.profile-setup-form .signup-button {
+  background-color: #5bc0de; /* Light blue button */
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.profile-setup-form .signup-button:hover {
+  background-color: #46b8da;
+}
+
+/* Share Ride Page Styles */
+.share-ride-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Align items at the top */
+  min-height: 100vh;
+  padding: 40px;
+  background-color: #f7f7f7;
+  font-family: sans-serif;
+}
+
+.share-ride-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%; /* Adjust as needed */
+  margin-bottom: 40px;
+}
+
+.share-ride-header h1 {
+  font-size: 2.5em;
+  color: #333;
+}
+
+.share-ride-main {
+  display: flex;
+  gap: 20px;
+}
+
+.share-ride-button-link {
+  text-decoration: none;
+}
+
+.share-ride-button {
+  background-color: #aaffaa; /* Light green */
+  color: #000;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.1em;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.share-ride-button:hover {
+  background-color: #88ff88;
+}
+
+.create-ride {
+  /* No specific styles needed for now */
+}
+
+.search-ride {
+  /* No specific styles needed for now */
+}
+
+/* Create Ride Page Styles */
+.create-ride-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  padding: 40px;
+  background-color: #f7f7f7;
+  font-family: sans-serif;
+}
+
+.create-ride-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin-bottom: 40px;
+}
+
+.create-ride-header h1 {
+  font-size: 2.5em;
+  color: #333;
+}
+
+.create-ride-main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 80%;
+  max-width: 400px;
+}
+
+.create-ride-main .input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 100%;
+}
+
+.create-ride-main .input-group label {
+  color: #555;
+  font-weight: bold;
+}
+
+.create-ride-main .input-group input[type='text'],
+.create-ride-main .input-group input[type='date'] {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1em;
+  box-sizing: border-box;
+}
+
+.create-ride-main .passenger-counter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.create-ride-main .passenger-counter button {
+  background-color: #aaffaa;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.create-ride-main .passenger-counter button:hover {
+  background-color: #88ff88;
+}
+
+.create-ride-main .passenger-counter .passenger-count {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #333;
+  min-width: 20px;
+  text-align: center;
+}
+
+.create-ride-main .create-button {
+  background-color: #00ff00; /* Bright green */
+  color: #fff;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.create-ride-main .create-button:hover {
+  background-color: #00cc00;
+}
+
+/* new */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f7f7f7; /* Light grey background */
+  font-family: sans-serif;
+}
+
+.logo-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%; /* Adjust as needed */
+  padding: 40px;
+  background: radial-gradient(circle, #aaffaa, #ccffcc, #e6ffe6, #ffffff); /* Green gradient background */
+  border-radius: 15px;
+}
+
+.logo-area h1 {
+  font-size: 3em;
+  color: #000; /* Black text */
+  font-weight: bold;
+}
+
+/* Login Form Styles */
+/* ... (previous login form styles) ... */
+
+/* Signup Form Styles */
+/* ... (previous signup form styles) ... */
+
+/* Home Page Styles */
+/* ... (previous home page styles) ... */
+
+/* Profile Setup Form Styles */
+/* ... (previous profile setup form styles) ... */
+
+/* Share Ride Page Styles */
+/* ... (previous share ride page styles) ... */
+
+/* Create Ride Page Styles */
+/* ... (previous create ride page styles) ... */
+
+/* Ride Created Success Page Styles */
+.ride-created-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  padding: 40px;
+  background-color: #f7f7f7;
+  font-family: sans-serif;
+}
+
+.ride-created-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin-bottom: 40px;
+}
+
+.ride-created-header h1 {
+  font-size: 2.5em;
+  color: #333;
+}
+
+.ride-created-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.ride-created-main .ride-details {
+  text-align: left;
+  width: 80%;
+  max-width: 400px;
+}
+
+.ride-created-main .ride-details h2 {
+  font-size: 1.5em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.ride-created-main .ride-details p {
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.ride-created-main .post-it-button {
+  background-color: #00ff00; /* Bright green */
+  color: #fff;
+  padding: 15px 40px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.ride-created-main .post-it-button:hover {
+  background-color: #00cc00;
+}
+
+/* new */
+.signup-form .login-link {
+  text-align: center;
+  margin-top: 20px;
+  color: #777;
+  font-size: 0.9em;
+}
+
+.signup-form .login-link a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.signup-form .login-link a:hover {
+  text-decoration: underline;
+}
+
+/* Home Page Styles */
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Align items at the top */
+  min-height: 100vh;
+  padding: 40px;
+  background-color: #f7f7f7;
+  font-family: sans-serif;
+}
+
+.home-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%; /* Adjust as needed */
+  margin-bottom: 40px;
+}
+
+.home-header h1 {
+  font-size: 2.5em;
+  color: #333;
+}
+
+.profile-icon {
+  font-size: 2em;
+  cursor: pointer;
+  color: #555;
+  border: 1px solid #555;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 80%; /* Adjust as needed */
+  max-width: 500px; /* Limit width of buttons */
+}
+
+.home-button-link {
+  text-decoration: none; /* Remove default link styling */
+  width: 100%; /* Make the link take the full width of the button container */
+}
+
+.home-button {
+  background-color: #aaffaa; /* Light green */
+  color: #000;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.1em;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s ease;
+  width: 100%; /* Make the button fill the link */
+  box-sizing: border-box; /* Ensure padding doesn't increase the button's overall width */
+}
+
+.home-button:hover {
+  background-color: #88ff88;
+}
+
+.home-button span[role="img"] {
+  font-size: 1.5em;
+}
+
+.share-ride {
+  /* No specific styles needed for now */
+}
+
+.list-stay {
+  /* No specific styles needed for now */
+}
+
+.search-stay {
+  /* No specific styles needed for now */
+}
+
+/* Profile Setup Form Styles */
+.profile-setup-form {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 30%; /* Adjust as needed */
+  text-align: left;
+}
+
+.profile-setup-form h2 {
+  text-align: center;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.profile-setup-form p {
+  margin-bottom: 20px;
+  color: #777;
+  text-align: center;
+}
+
+.profile-setup-form .input-group {
+  margin-bottom: 15px;
+}
+
+.profile-setup-form .input-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #555;
+  font-size: 0.9em;
+}
+
+.profile-setup-form .input-group input[type='email'],
+.profile-setup-form .input-group input[type='tel'],
+.profile-setup-form .input-group input[type='text'],
+.profile-setup-form .input-group input[type='password'] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 1em;
+}
+
+.profile-setup-form .password-note {
+  color: #ff0000; /* Red color for the note */
+  font-size: 0.8em;
+  margin-bottom: 10px;
+}
+
+.profile-setup-form .signup-button {
+  background-color: #5bc0de; /* Light blue button */
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.profile-setup-form .signup-button:hover {
+  background-color: #46b8da;
+}
+
+/* Share Ride Page Styles */
+.share-ride-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Align items at the top */
+  min-height: 100vh;
+  padding: 40px;
+  background-color: #f7f7f7;
+  font-family: sans-serif;
+}
+
+.share-ride-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%; /* Adjust as needed */
+  margin-bottom: 40px;
+}
+
+.share-ride-header h1 {
+  font-size: 2.5em;
+  color: #333;
+}
+
+.share-ride-main {
+  display: flex;
+  gap: 20px;
+}
+
+.share-ride-button-link {
+  text-decoration: none;
+}
+
+.share-ride-button {
+  background-color: #aaffaa; /* Light green */
+  color: #000;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.1em;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.share-ride-button:hover {
+  background-color: #88ff88;
+}
+
+.create-ride {
+  /* No specific styles needed for now */
+}
+
+.search-ride {
+  /* No specific styles needed for now */
+}
+
+/* Create Ride Page Styles */
+.create-ride-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  padding: 40px;
+  background-color: #f7f7f7;
+  font-family: sans-serif;
+}
+
+.create-ride-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin-bottom: 40px;
+}
+
+.create-ride-header h1 {
+  font-size: 2.5em;
+  color: #333;
+}
+
+.create-ride-main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 80%;
+  max-width: 400px;
+}
+
+.create-ride-main .input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 100%;
+}
+
+.create-ride-main .input-group label {
+  color: #555;
+  font-weight: bold;
+}
+
+.create-ride-main .input-group input[type='text'],
+.create-ride-main .input-group input[type='date'] {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1em;
+  box-sizing: border-box;
+}
+
+.create-ride-main .passenger-counter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.create-ride-main .passenger-counter button {
+  background-color: #aaffaa;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.create-ride-main .passenger-counter button:hover {
+  background-color: #88ff88;
+}
+
+.create-ride-main .passenger-counter .passenger-count {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #333;
+  min-width: 20px;
+  text-align: center;
+}
+
+.create-ride-main .create-button {
+  background-color: #00ff00; /* Bright green */
+  color: #fff;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.create-ride-main .create-button:hover {
+  background-color: #00cc00;
+}
+
+/* Ride Created Success Page Styles */
+.ride-created-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  padding: 40px;
+  background-color: #f7f7f7;
+  font-family: sans-serif;
+}
+
+.ride-created-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin-bottom: 40px;
+}
+
+.ride-created-header h1 {
+  font-size: 2.5em;
+  color: #333;
+}
+
+.ride-created-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.ride-created-main .ride-details {
+  text-align: left;
+  width: 80%;
+  max-width: 400px;
+}
+
+.ride-created-main .ride-details h2 {
+  font-size: 1.5em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.ride-created-main .ride-details p {
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.ride-created-main .post-it-button {
+  background-color: #00ff00; /* Bright green */
+  color: #fff;
+  padding: 15px 40px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.ride-created-main .post-it-button:hover {
+  background-color: #00cc00;
+}
+
+/* Search Ride Page Styles */
+.search-ride-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  padding: 40px;
+  background-color: #f7f7f7;
+  font-family: sans-serif;
+}
+
+.search-ride-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin-bottom: 40px;
+}
+
+.search-ride-header h1 {
+  font-size: 2.5em;
+  color: #333;
+}
+
+.search-ride-main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 80%;
+  max-width: 400px;
+}
+
+.search-ride-main .input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 100%;
+}
+
+.search-ride-main .input-group label {
+  color: #555;
+  font-weight: bold;
+}
+
+.search-ride-main .input-group input[type='text'],
+.search-ride-main .input-group input[type='date'] {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1em;
+  box-sizing: border-box;
+}
+
+.search-ride-main .passenger-counter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.search-ride-main .passenger-counter button {
+  background-color: #ddd;
+  color: #333;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.search-ride-main .passenger-counter button:hover {
+  background-color: #ccc;
+}
+
+.search-ride-main .passenger-counter .passenger-count {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #333;
+  min-width: 20px;
+  text-align: center;
+}
+
+.search-ride-main .search-button {
+  background-color: #00ff00; /* Bright green */
+  color: #fff;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.search-ride-main .search-button:hover {
+  background-color: #00cc00;
+}
+
+/* search ride */
+/* Select Ride Page Styles */
+.select-ride-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  padding: 40px;
+  background-color: #f7f7f7;
+  font-family: sans-serif;
+}
+
+.select-ride-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin-bottom: 30px;
+}
+
+.select-ride-header h1 {
+  font-size: 2.5em;
+  color: #333;
+}
+
+.filter-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.filter-section span {
+  font-weight: bold;
+  color: #555;
+}
+
+.filter-section select {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.select-ride-main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  width: 80%;
+}
+
+.ride-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.driver-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.profile-icon-small {
+  font-size: 1.5em;
+  color: #555;
+  border: 1px solid #555;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.driver-name {
+  font-weight: bold;
+  color: #333;
+  font-size: 1.1em;
+}
+
+.ride-card p {
+  margin-bottom: 8px;
+  color: #555;
+  font-size: 0.95em;
+}
+
+.ride-card .location {
+  font-style: italic;
+}
+
+.ride-card .fare {
+  font-weight: bold;
+  color: #007bff;
+}
+
+.ride-card button.select-button {
+  background-color: #00ff00; /* Bright green */
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  align-self: flex-start; /* Align button to the left within the card */
+}
+
+.ride-card button.select-button:hover {
+  background-color: #00cc00;
+}
+
+/* ride check */
+/* Ride Check Page Styles */
+.ride-check-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  padding: 40px;
+  background-color: #f7f7f7;
+  font-family: sans-serif;
+}
+
+.ride-check-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin-bottom: 30px;
+}
+
+.ride-check-header h1 {
+  font-size: 2.5em;
+  color: #333;
+}
+
+.ride-check-main {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 80%;
+  max-width: 800px; /* Adjust as needed */
+}
+
+.profile-section,
+.selected-section,
+.maps-section {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+}
+
+.profile-section h2,
+.selected-section h2,
+.maps-section h2 {
+  font-size: 1.5em;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.profile-section p {
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.profile-section .info {
+  font-weight: bold;
+  color: #007bff;
+}
+
+.report-share {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.report,
+.share {
+  display: flex;
+  align-items: center;
+  color: #777;
+  cursor: pointer;
+}
+
+.report .icon,
+.share .icon {
+  font-size: 1.2em;
+  margin-right: 8px;
+}
+
+.selected-ride-card {
+  background-color: #eee;
+  padding: 15px;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.selected-ride-card .profile-icon-small {
+  font-size: 1.5em;
+  color: #555;
+  border: 1px solid #555;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.selected-ride-card .driver-name {
+  font-weight: bold;
+  color: #333;
+  font-size: 1.1em;
+}
+
+.selected-ride-card .location {
+  font-style: italic;
+}
+
+.maps-section p {
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.map-placeholder {
+  background-color: #ddd;
+  border-radius: 6px;
+  height: 200px; /* Adjust as needed */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #777;
+  font-style: italic;
+}
+
+.book-ride-button {
+  background-color: #00ff00; /* Bright green */
+  color: #fff;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  align-self: center;
+}
+
+.book-ride-button:hover {
+  background-color: #00cc00;
+}
+
+/* RideDetails.css */
+.ride-detail-container {
+  font-family: sans-serif;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.ride-detail-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.ride-detail-header h1 {
+  font-size: 24px;
+  color: #333;
+}
+
+.profile-icon {
+  font-size: 24px;
+  color: #777;
+  cursor: pointer;
+}
+
+.ride-detail-main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.driver-info-section,
+.ride-info-section,
+.reviews-section {
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background-color: #fff;
+}
+
+.driver-info-section h2,
+.ride-info-section h2,
+.reviews-section h2 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 5px;
+}
+
+.driver-profile {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 15px;
+}
+
+.profile-icon-large {
+  font-size: 48px;
+  color: #555;
+}
+
+.driver-profile p {
+  margin: 5px 0;
+}
+
+.driver-name {
+  font-weight: bold;
+  font-size: 18px;
+  color: #333;
+}
+
+.driver-bio h3 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.ride-info-section p {
+  margin: 8px 0;
+}
+
+.ride-info-section .info {
+  font-weight: bold;
+  color: #555;
+}
+
+.reviews-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.reviews-section li {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+}
+
+.book-now-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.book-now-button:hover {
+  background-color: #45a049;
+}
+
+.back-link {
+  display: block;
+  margin-top: 15px;
+  color: #007bff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+/* ListStay.css */
+.list-stay-container {
+  font-family: sans-serif;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.list-stay-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.list-stay-header h1 {
+  font-size: 24px;
+  color: #333;
+}
+
+.profile-icon {
+  font-size: 24px;
+  color: #777;
+  cursor: pointer;
+}
+
+.list-stay-main h2 {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+.input-group input[type="text"],
+.input-group input[type="number"],
+.input-group select,
+.input-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.input-group textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.create-button {
+  background-color: #00ff00; /* Bright green */
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+}
+
+.create-button:hover {
+  background-color: #00cc00; /* Darker green */
+}
